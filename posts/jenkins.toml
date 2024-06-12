@@ -1,0 +1,11 @@
+# Copyright 2024 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Yume Wo Katare"
+image="yume_wo_katare.jpg"
+post='''
+Yume Wo Katare is a ramen restaurant in the Porter Square area of Cambridge, MA. There are (usually) only two menu items, regular and large. I would recommend the regular as I think the ratios of ingredients are slightly better and it's still enough to feed anyone. This is by far my favorite restaurant in Boston despite the fact that you might have to sit through a bunch of people "sharing their dreams" with the room. I believe that Yume Wo Katare has the best ramen in America.
+'''
+continent="North America"
+country="USA"
+region="Massachusetts"

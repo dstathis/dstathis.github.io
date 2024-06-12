@@ -18,7 +18,7 @@ def main():
 
     web_dir = pathlib.Path('www')
     web_dir.mkdir(exist_ok=True)
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=True)
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=False)
     index = env.get_template('index.html')
     with (web_dir / 'index.html').open('w') as f:
         f.write(index.render(posts=posts))

@@ -1,0 +1,16 @@
+# Copyright 2024 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Ta Kanaria"
+alt_name="Τα Κανάρια"
+image="kanaria.jpg"
+post='''
+At Kanaria they have two things (and a limited amount of appetizers). Prawns and Fish. Both are the best you can find in Athens by a significant margin. The prawns, however, are the best you will have in your entire life. The can hardly even be considered the same food as prawns you have somewhere else. Book a flight just to eat here!<br>
+<br>
+Warning: The restaurant is closed all summer.<br>
+<br>
+Warning: This restaurant is very expensive compared to other restaurants in Athens.
+'''
+continent="Europe"
+country="Greece"
+region="Attica"

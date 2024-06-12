@@ -1,0 +1,11 @@
+# Copyright 2024 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Monica’s Mercato"
+image="monicas.jpg"
+post='''
+Monica’s Mercato is a deli and grocery store in the heart of the North End. The Italian sub from Monica’s is hands down the best I have ever had. That’s saying something given that the Italian sandwich originated in New England. This is a must visit for anyone in Boston.
+'''
+continent="North America"
+country="USA"
+region="Massachusetts"

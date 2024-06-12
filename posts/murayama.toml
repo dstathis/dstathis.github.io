@@ -1,0 +1,11 @@
+# Copyright 2024 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Sushi Murayama"
+image="murayama.jpg"
+post='''
+Sushi Murayama is hidden up on the third floor of a building in Honolulu. The Omakase here is one of the best I have had. Everything is creative and beautiful. Each course totally different from the others. Big fat pieces of fish. And of course, Every bit is delicious. Absolute requirement for anyone in Hawaii.
+'''
+continent="North America"
+country="USA"
+region="Hawaii"

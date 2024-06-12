@@ -1,0 +1,12 @@
+# Copyright 2024 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Taverna To Konatsi"
+alt_name="Ταβέρνα Το Κονάτσι"
+image="konatsi.jpg"
+post='''
+Taverna To Konatsi is a traditional Greek taverna located in Sapounakeika (Σαπουνακαίικα) in the Arcadia (Αρκαδία) region of Greece. While everything here, including the view, is amazing, the specialty is lamb chops. They are spectacular and you will be served massive plates of them. Make sure to make a reservation, though, in order to get the best cuts of meat. Also be sure to order a plate of sheftalia (σιεφταλιά). They are the best meatballs I have ever had.
+'''
+continent="Europe"
+country="Greece"
+region="Arkadia"

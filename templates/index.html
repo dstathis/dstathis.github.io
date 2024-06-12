@@ -5,9 +5,12 @@
 
 <body>
   {% for post in posts %}
-  <h1>{{ post.name }}</h1>
-  <img src="{{ post.image }}">
-  <p>{{ post.post }}</p>
+    <h1>{{ post.name }}</h1>
+    {% if "alt_name" in post %}
+      <h2>({{ post.alt_name }})</h2>
+    {% endif %}
+    <img src="../images/{{ post.image }}">
+    <p>{{ post.post }}</p>
   {% endfor %}
 </body>
 </html>
