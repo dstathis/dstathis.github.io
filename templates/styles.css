@@ -1,20 +1,24 @@
 body {
-  background-color: #D1E4DD
+  background-color: #D1E4DD;
 }
 
-.post-image {
+.post {
+  max-width: 100%;
+  width: 750px;
+}
+
+.image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
 }
 
-.post-body {
+.body {
   margin: auto;
-  width: 50%
 }
 
-.post-title {
+.title {
+  margin: auto;
   text-align: center;
 }
 
