@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   {% for post in posts %}
-    <h1>{{ post.name }}</h1>
+    <h1 class="post-title main-title">{{ post.name }}</h1>
     {% if "alt_name" in post %}
-      <h2>({{ post.alt_name }})</h2>
+      <h2 class="post-title">({{ post.alt_name }})</h2>
     {% endif %}
-    <img src="../images/{{ post.image }}">
-    <p>{{ post.post }}</p>
+    <img class="post-image" src="../images/{{ post.image }}">
+    <p class="post-body">{{ post.post }}</p>
   {% endfor %}
 </body>
 </html>

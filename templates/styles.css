@@ -1,0 +1,23 @@
+body {
+  background-color: #D1E4DD
+}
+
+.post-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.post-body {
+  margin: auto;
+  width: 50%
+}
+
+.post-title {
+  text-align: center;
+}
+
+.main-title {
+  text-decoration: underline;
+}

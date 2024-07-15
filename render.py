@@ -4,6 +4,7 @@
 # See CODE_LICENSE file for licensing details.
 
 import pathlib
+import shutil
 import tomllib
 
 import jinja2
@@ -22,6 +23,7 @@ def main():
     index = env.get_template('index.html')
     with (web_dir / 'index.html').open('w') as f:
         f.write(index.render(posts=posts))
+    shutil.copy("templates/styles.css", web_dir / "styles.css")
 
 
 if __name__ == '__main__':
