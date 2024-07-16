@@ -20,7 +20,8 @@ def main():
 
     web_dir = pathlib.Path('www')
     web_dir.mkdir(exist_ok=True)
-    os.symlink('../images', web_dir / 'images')
+    if not (web_dir / 'images').exists():
+        os.symlink('../images', web_dir / 'images')
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=False)
     index = env.get_template('index.html')
     with (web_dir / 'index.html').open('w') as f:
