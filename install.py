@@ -14,7 +14,7 @@ def run(cmd):
 def main():
     run('dnf install -y epel-release')
     run('dnf upgrade -y')
-    run('dnf install -y nginx certbot')
+    run('dnf install -y nginx certbot python3-certbot-nginx')
     print('Writing config...')
     with open('nginx.conf') as f:
         conf = f.read()
