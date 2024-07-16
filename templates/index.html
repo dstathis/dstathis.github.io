@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+  <h1 class="site-title">Dylan Eats!</h1>
   {% for post in posts %}
     <h1 class="post title main-title">{{ post.name }}</h1>
     {% if "alt_name" in post %}
@@ -7,6 +8,6 @@
     {% endif %}
     <img class="post image" src="../images/{{ post.image }}">
     <p class="post body">{{ post.post }}</p>
-    <hr class="post">
+    <hr class="post divider">
   {% endfor %}
 {% endblock %}
