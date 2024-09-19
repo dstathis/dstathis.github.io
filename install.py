@@ -15,7 +15,9 @@ def run(cmd):
 def main():
     run('dnf install -y epel-release')
     run('dnf upgrade -y')
-    run('dnf install -y nginx certbot python3-certbot-nginx python3.11')
+    run('rpm --import grafana-gpg.key')
+    run('cp grafana.repo /etc/yum.repos.d/grafana.repo')
+    run('dnf install -y nginx certbot python3-certbot-nginx python3.11 grafana-agent')
     run('systemctl enable nginx')
     print('Writing config...')
     with open('nginx.conf') as f:
