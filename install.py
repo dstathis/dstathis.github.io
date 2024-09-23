@@ -28,6 +28,10 @@ def main():
         f.write(conf)
     run('certbot certonly -d dylaneats.com,www.dylaneats.com -n --nginx')
     run('systemctl restart nginx')
+    with open('password.txt') as f:
+        password = f.read()
+    run('cp grafana-agent.yaml /etc/grafana-agent.yaml')
+    run(f'sed "{password}" grafana-agent.yaml')
     run('systemctl restart grafana-agent')
 
 

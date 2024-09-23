@@ -1,0 +1,14 @@
+server:
+  log_level: warn
+
+integrations:
+  agent:
+    enabled: true
+  prometheus_remote_write:
+    - url: "https://prometheus-prod-10-prod-us-central-0.grafana.net/api/prom/push"
+      basic_auth:
+        username: "410064"
+        password: "%%password%%"
+  node_exporter:
+    enabled: true
+    instance: dylaneats
