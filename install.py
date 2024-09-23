@@ -26,7 +26,7 @@ def main():
     conf = conf.replace('{% repo_dir %}', os.getcwd())
     with open('/etc/nginx/nginx.conf', 'w') as f:
         f.write(conf)
-    run('certbot certonly --nginx')
+    run('certbot certonly -d dylaneats.com,www.dylaneats.com -n --nginx')
     run('systemctl restart nginx')
     run('systemctl restart grafana-agent')
 
