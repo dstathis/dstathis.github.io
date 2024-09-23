@@ -17,7 +17,7 @@ def main():
     run('dnf upgrade -y')
     run('rpm --import grafana-gpg.key')
     run('cp grafana.repo /etc/yum.repos.d/grafana.repo')
-    run('dnf install -y nginx certbot python3-certbot-nginx python3.11 grafana-agent')
+    run('dnf install -y nginx certbot python3-certbot-nginx python3.11 grafana-agent mimirtool')
     run('systemctl enable nginx')
     run('systemctl enable grafana-agent')
     print('Writing config...')
