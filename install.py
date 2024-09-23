@@ -31,7 +31,7 @@ def main():
     with open('password.txt') as f:
         password = f.read()
     run('cp grafana-agent.yaml /etc/grafana-agent.yaml')
-    run(f'sed "{password}" grafana-agent.yaml')
+    run(f'sed -i "s/%%password%%/{password}/g" /etc/grafana-agent.yaml')
     run('systemctl restart grafana-agent')
 
 
