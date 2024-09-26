@@ -30,6 +30,19 @@ def main():
     run('systemctl restart nginx')
     with open('password.txt') as f:
         password = f.read()
+    if not [ -f "/usr/local/bin/nginx-prometheus-exporter" ]; then
+        mkdir tmp
+        cd tmp
+        run('curl --ouput exporter.tar.gz https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v1.3.0/nginx-prometheus-exporter_1.3.0_linux_amd64.tar.gz')
+        run('tar xf exporter.tar.gz')
+        run('mv nginx-prometheus-exporter /usr/local/bin/nginx-prometheus-exporter')
+        run('cd ..')
+        run('rm -r tmp')
+    run('cp nginx_exporter.service nginx_exporter.socket /etc/systemd/system/')
+    run('useradd nginx_exporter')
+    run('systemctl daemon-reload')
+    run('systemctl enable nginx_exporter')
+    run('systemctl start nginx_exporter')
     run('cp grafana-agent.yaml /etc/grafana-agent.yaml')
     run(f'sed -i "s/%%password%%/{password}/g" /etc/grafana-agent.yaml')
     run('systemctl restart grafana-agent')
