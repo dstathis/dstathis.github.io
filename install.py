@@ -30,9 +30,9 @@ def main():
     run('systemctl restart nginx')
     with open('password.txt') as f:
         password = f.read()
-    if not [ -f "/usr/local/bin/nginx-prometheus-exporter" ]; then
-        mkdir tmp
-        cd tmp
+    if not os.path.exists("/usr/local/bin/nginx-prometheus-exporter"):
+        run('mkdir tmp')
+        run('cd tmp')
         run('curl --ouput exporter.tar.gz https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v1.3.0/nginx-prometheus-exporter_1.3.0_linux_amd64.tar.gz')
         run('tar xf exporter.tar.gz')
         run('mv nginx-prometheus-exporter /usr/local/bin/nginx-prometheus-exporter')
