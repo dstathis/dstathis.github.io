@@ -18,15 +18,10 @@ def main():
             post = tomllib.load(f)
         posts.append(post)
 
-    web_dir = pathlib.Path('www')
-    web_dir.mkdir(exist_ok=True)
-    if not (web_dir / 'images').exists():
-        os.symlink('../images', web_dir / 'images')
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=False)
     index = env.get_template('index.html')
-    with (web_dir / 'index.html').open('w') as f:
+    with pathlib.Path('index.html').open('w') as f:
         f.write(index.render(posts=posts))
-    shutil.copy("templates/styles.css", web_dir / "styles.css")
 
 
 if __name__ == '__main__':
