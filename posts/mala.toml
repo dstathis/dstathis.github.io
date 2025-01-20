@@ -1,0 +1,11 @@
+# Copyright 2025 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Mala Restaurant"
+image="mala.jpg"
+post='''
+If you want one of the most excellent Chinese meals around, head to Mala in Allston. They serve up spicy Szechwan food which I can only assume based on the clientele is extremely authentic. This place is delicious. You can't leave without being stuffed and totally satisfied. Be warned though, every dish is very spice so make sure you check with your friends before bringing them here. If you do, however, you will be a hero!
+'''
+continent="North America"
+country="USA"
+region="Massachusetts"
