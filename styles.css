@@ -3,6 +3,38 @@ body {
   font-family: verdana, arial, sans-serif;
 }
 
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.nav-li:last-child {
+  border-right: none;
+}
+
+.nav-item {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background-color: #111;
+}
+
 .site-title {
   text-align: center;
   font-size: 4em;
