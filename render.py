@@ -17,6 +17,7 @@ def main():
         with post_file.open('rb') as f:
             post = tomllib.load(f)
         posts.append(post)
+    posts.sort(key=lambda x: x['name'])
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=False)
     index = env.get_template('index.html')
