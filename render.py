@@ -12,7 +12,7 @@ import jinja2
 
 def main():
     posts = []
-    posts_dir = pathlib.Path('posts')
+    posts_dir = pathlib.Path('posts/dylaneats')
     for post_file in posts_dir.iterdir():
         with post_file.open('rb') as f:
             post = tomllib.load(f)
