@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
   <h1 class="site-title">Dylan Eats!</h1>
+  <div class="main-column">
   {% for post in posts %}
-    <h1 class="post title main-title">{{ post.name }}</h1>
+    <h1 class="title main-title">{{ post.name }}</h1>
     {% if "alt_name" in post %}
-      <h2 class="post title">({{ post.alt_name }})</h2>
+      <h2 class="title">({{ post.alt_name }})</h2>
     {% endif %}
-    <img class="post image" src="images/{{ post.image }}">
-    <p class="post body">{{ post.post }}</p>
-    <hr class="post divider">
+    <img class="image" src="images/{{ post.image }}">
+    <p class="body">{{ post.post }}</p>
+    <a class="location" href="{{ post.location }}">📍</a>
+    <hr class="divider">
   {% endfor %}
+  </div>
 {% endblock %}

@@ -8,15 +8,25 @@ body {
   font-size: 4em;
 }
 
-.post {
-  max-width: 100%;
+.main-column {
   width: 750px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.location {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 1em;
+  display: block; /* This makes the whole line clickable which is not what I want. */
 }
 
 .image {
   padding-top: 2em;
   display: block;
   margin: auto;
+  max-width: 100%;
 }
 
 .body {
@@ -37,7 +47,7 @@ body {
 }
 
 .divider {
-  margin-top: 5em;
+  margin-top: 2em;
   margin-bottom: 5em;
   border: 1px solid;
 }
