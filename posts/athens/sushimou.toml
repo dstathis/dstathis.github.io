@@ -1,0 +1,12 @@
+# Copyright 2025 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Sushimou"
+image="sushimou.jpg"
+post='''
+Sushimou is a small sushi restaurant near Syntagma Square. The chef mastered his craft in Japan and returned to Greece to serve sushi. There is only the omakase menu which is fine because it is very cheap for what you are getting. This is definitely the best sushi you will find anywhere in Greece!
+'''
+continent="Europe"
+country="Greece"
+region="Attica"
+location="https://maps.app.goo.gl/RPq5fNwjx39LAAae9"
