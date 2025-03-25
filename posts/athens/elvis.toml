@@ -1,0 +1,13 @@
+# Copyright 2025 Dylan Stephano-Shachter
+# See CONTENT_LICENSE file for licensing details.
+
+name="Elvis"
+alt_name="Καλαμάκια Ο Έλβις"
+image="elvis.jpg"
+post='''
+If you are looking for the best souvlaki in Athens, look no farther than Elvis! All they have is skewers and that's all you will need. There are now locations in Pagkrati and Monastiraki. Mostly they are selling pork and chicken skewers, but make sure to try a kebab as well.
+'''
+continent="Europe"
+country="Greece"
+region="Attica"
+location="https://maps.app.goo.gl/JkmQCaUpchzapR9S8"
