@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 class="site-title">Coffee in Greece!</h1>
+  <div class="main-column">
+    <h2>About Greek Coffee Culture</h2>
+    <p class="body">Greece has the one of the strongest coffee cultures of anywhere around the world. With a heavy focus on cold coffee, Greece also offers a coffee experience that is unique from the same old Italian drinks served everywhere in Europe.
+    </p>
+    <h2>Drinks</h2>
+    <ul>
+      <li>
+        <h4>Freddo Espresso</h4>
+        <p>Freddo espresso is by far the most popular coffee drink in Greece. Invented in 1991, it has since taken the country by storm. It consists of only espresso and ice and it is delicious!</p>
+      </li>
+      <li>
+        <h4>Freddo Cappucino</h4>
+        <p>Same thing as a freddo espresso but with cold frothed milk on top. It is a nice, slightly more luxurious version.</p>
+      </li>
+      <li>
+        <h4>Greek Coffee (Hot)</h4>
+        <p>The traditional coffe of Greece (and Turkey) is cooked with the ground immersed in the water. It creates a strong thick coffe that is like a muddy espresso. Definitely worth trying, but if you miss out it tends to be available from Turkish and Arabic places all over the world.</p>
+      </li>
+      <li>
+        <h4>Frappe</h4>
+        <p>A decade ago, this would have been first on the list, but, how the mighty have fallen. For a long time, the frappe was the king of Greek coffee culture. It is made from Nescafe (or sometimes other instant coffee). While it is the best version of instant coffe I have had, it is a low quality drink and you can definitely tell. However, if you want to taste the coffee history of Greece, this is absolutely as important to try as Greek coffee.</p>
+      </li>
+      <li>
+        <h4>Specialty Filter Coffee</h4>
+        <p>This is not Greek at all. In fact most Greeks have never tasted this. However, all the cafes I will recommend are excellent, high quality coffe shops and so they have very good filter coffee which, in my opinion, is the best way to drink high quality coffee.</p>
+      </li>
+    </ul>
+    <h2>Lingo</h2>
+    <ul>
+      <li>Zachari?: Sugar? This is usually what you will be asked when you order coffee. You should respond with one of the next three words.</li>
+      <li>Glyko: Translates to "sweet". It means lots of sugar.</li>
+      <li>Metrio: Medium sugar.</li>
+      <li>Sketo: Translates to "plain". It means no sugar.</li>
+      <li>Me Gala: With milk. This is only really useful for frappe.</li>
+  {% for post in posts %}
+    <h1 class="title main-title">{{ post.name }}</h1>
+    {% if "alt_name" in post %}
+      <h2 class="title">({{ post.alt_name }})</h2>
+    {% endif %}
+    <img class="image" src="images/{{ post.image }}">
+    <p class="body">{{ post.post }}</p>
+    <a class="location" href="{{ post.location }}">📍</a>
+    <hr class="divider">
+  {% endfor %}
+  </div>
+{% endblock %}
