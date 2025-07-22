@@ -29,7 +29,7 @@ def main():
 
     greece_coffee_posts = []
     greece_coffee_posts_dir = pathlib.Path('posts/greece_coffee')
-    for post_file in greece_coffee_posts_dir.iterdir():
+    for post_file in greece_coffee_posts_dir.glob('*.toml'):
         with post_file.open('rb') as f:
             post = tomllib.load(f)
         greece_coffee_posts.append(post)
