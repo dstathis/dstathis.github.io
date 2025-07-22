@@ -37,13 +37,13 @@ def main():
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=False)
     root = pathlib.Path('build')
+    root.mkdir(exist_ok=True)
     images = root / 'images'
     if not images.exists():
         images.symlink_to('../images', target_is_directory=True)
     styles = root / 'styles.css'
     if not styles.exists():
         styles.symlink_to('../styles/styles.css')
-    root.mkdir(exist_ok=True)
     index = env.get_template('index.html')
     with (root / 'index.html').open('w') as f:
         f.write(index.render(posts=de_posts))
