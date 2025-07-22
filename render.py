@@ -36,14 +36,22 @@ def main():
     greece_coffee_posts.sort(key=lambda x: x['name'])
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'), autoescape=False)
+    root = pathlib.Path('build')
+    images = root / 'images'
+    if not images.exists():
+        images.symlink_to('../images', target_is_directory=True)
+    styles = root / 'styles.css'
+    if not styles.exists():
+        styles.symlink_to('../styles/styles.css')
+    root.mkdir(exist_ok=True)
     index = env.get_template('index.html')
-    with pathlib.Path('index.html').open('w') as f:
+    with (root / 'index.html').open('w') as f:
         f.write(index.render(posts=de_posts))
     athens = env.get_template('athens.html')
-    with pathlib.Path('athens.html').open('w') as f:
+    with (root / 'athens.html').open('w') as f:
         f. write(athens.render(posts=ath_posts))
     greece_coffee = env.get_template('greece_coffee.html')
-    with pathlib.Path('greece_coffee.html').open('w') as f:
+    with (root / 'greece_coffee.html').open('w') as f:
         f. write(greece_coffee.render(posts=greece_coffee_posts))
 
 
